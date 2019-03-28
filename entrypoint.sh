@@ -7,7 +7,7 @@ echo "Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
 REQ="$(find . -name requirements.txt)"
 
 if [ -e "$REQ" ]; then
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 fi
 
 # Make sure settings file is readable
@@ -18,7 +18,7 @@ SETTINGS="($find . -name settings.py)"
 echo "DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), }}" >> "$SETTINGS"
 
 # run test
-sh -c "python manage.py test"
+sh -c "python3 manage.py test"
 
 echo "#########################################"
 echo "Completed ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"

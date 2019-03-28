@@ -4,6 +4,8 @@ set -e
 echo "#########################################"
 echo "Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
 
+pip install -r requirements.txt
+
 # Make sure settings file is readable
 chmod -R 777 .
 

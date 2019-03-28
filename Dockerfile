@@ -11,7 +11,7 @@ LABEL "repository"="https://github.com/vabene1111/django-test-action/"
 RUN apk add --no-cache bash
 RUN pip install --upgrade pip
 RUN pip install django
-RUN python --version ; pip --version ; pytest --version
+RUN python --version ; pip --version
 
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh

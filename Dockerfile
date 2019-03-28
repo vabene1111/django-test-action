@@ -19,7 +19,6 @@ RUN apk --no-cache add \
     gettext
 
 RUN pip3 install --upgrade pip
-RUN pip3 install django
 RUN python3 --version ; pip3 --version
 
 COPY entrypoint.sh /
